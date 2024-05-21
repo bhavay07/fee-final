@@ -1,0 +1,32 @@
+import React from "react";
+import { Cart, FlexContent, Footer, Hero, Navbar, Stories } from "./components";
+import {
+  heroapi,
+  popularsales,
+  toprateslaes,
+  highlight,
+  sneaker,
+  story,
+  footerAPI,
+} from "./data/data";
+import { Sales } from "./components";
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Cart />
+      <main className="flex flex-col gap-28 relative mb-[4rem]">
+        <Hero heroapi={heroapi} />
+        <Sales endpoint={popularsales} ifExists />
+        <FlexContent endpoint={highlight} ifExists />
+        <Sales endpoint={toprateslaes} />
+        <FlexContent endpoint={sneaker} />
+        <Stories story={story} />
+      </main>
+      <Footer footerAPI={footerAPI} />
+    </>
+  );
+};
+
+export default App;

@@ -31,7 +31,7 @@ const Footer = ({ footerAPI: { titles, links } }) => {
             <p className="text-sm md:text-center">
               Copyright <sup className="text-base font-bold">&copy;</sup> All
               Reserved Rights 2024{" "}
-              <span className="font-semibold">A product By Bhavay and chaitanya</span>
+              <span className="font-semibold">A product By Bhavay</span>
             </p>
           </div>
         </div>
